@@ -1,4 +1,1 @@
-poker-hands
-===========
-
-Library for simulating poker hands
+Simple ruby library for dealing poker hands.
