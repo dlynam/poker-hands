@@ -9,6 +9,7 @@ class Deck
   end
 
   def deal_hand
+    raise ArgumentError, 'no more cards in the deck' if @cards.empty?
     Hand.new(@cards.shift(5))
   end
   

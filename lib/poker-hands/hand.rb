@@ -3,13 +3,16 @@ class Hand
 
   def initialize(cards)
     @cards = cards
+    @ranks = @cards.collect{|card| card.rank }
+    @suits = @cards.collect{|card| card.suit }
   end
 
   def show
-    puts "showing the hand"
+    output = ""
     @cards.each do |card|
-      puts card.suit
+      output += "#{card.to_s} "
     end
+    puts "showing hand: #{output}"
   end
   
 end
