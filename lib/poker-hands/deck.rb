@@ -5,7 +5,11 @@ class Deck
   attr_accessor :cards
 
   def initialize
-    @cards = RANKS.map{|rank| SUITS.map{|suit| Card.new("#{rank}#{suit}")}}.flatten
+    @cards = RANKS.map{|rank| SUITS.map{|suit| Card.new("#{rank}#{suit}")}}.flatten.shuffle
+  end
+
+  def deal_hand
+    Hand.new(@cards.shift(5))
   end
   
 end

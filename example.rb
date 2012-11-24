@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + '/lib/poker-hands'
 
-c = Deck.new
-puts c.cards[0]
+deck = Deck.new
+hand = deck.deal_hand
+hand.show
